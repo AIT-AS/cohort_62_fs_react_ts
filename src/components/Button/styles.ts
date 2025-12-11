@@ -1,10 +1,37 @@
 import styled from "@emotion/styled";
 
-interface ButtonComponentStyles {
+interface ButtonComponentProps {
   $isRed: boolean;
 }
 
-export const PageWrapper = styled.button`
+const generateButtonColor = (isRed: boolean, disabled: boolean | undefined) => {
+  if (disabled) {
+    return "#acacacff";
+  } else {
+    if (isRed) {
+      return "#ff6868ff";
+    } else {
+      return "#1f27f5";
+    }
+  }
+};
+
+const generateButtonColorOnHover = (
+  isRed: boolean,
+  disabled: boolean | undefined
+) => {
+  if (disabled) {
+    return "#acacacff";
+  } else {
+    if (isRed) {
+      return "#fc3333ff";
+    } else {
+      return "rgb(97, 102, 255)";
+    }
+  }
+};
+
+export const ButtonComponent = styled.button<ButtonComponentProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,25 +40,15 @@ export const PageWrapper = styled.button`
   padding: 0;
   height: 70px;
   width: 100%;
-  background-color: ${({ $isRed }) =>
-    $isRed ? "rgba(232, 13, 13, 1)" : " rgb(82, 82, 241)"};
-  color: white;
+  background-color: ${({ $isRed, disabled }) =>
+    generateButtonColor($isRed, disabled)};
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
-  cursor: pointer
-`;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
-
-export const Paragraph = styled.p`
-  font-size: 30px;
-  font-weight: bold;
-  color: red;
-
-  :hover {
-    background-color: rgb(104, 104, 233);
+  &:hover {
+    background-color: ${({ $isRed, disabled }) =>
+      generateButtonColorOnHover($isRed, disabled)};
   }
-`;
-
-export const ButtonControl = styled.div`
-  width: 300px;
 `;
