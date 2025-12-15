@@ -5,6 +5,7 @@ import GlobalStyles from "styles/GlobalStyles";
 // import Lesson_07 from "lessons/Lesson_07/Lesson_07";
 import Lesson_08 from "lessons/Lesson_08/Lesson_08";
 
+
 // Homeworks
 // import Homework_06 from "homeworks/Homework_06/Homework_06";
 // import Homework_07 from "homeworks/Homework_07/Homework_07";
@@ -15,16 +16,11 @@ function App() {
     <>
       {/* <Lesson_06 /> */}
       {/* <Lesson_07 /> */}
-<<<<<<< Updated upstream
-      {/* <GlobalStyles /> */}
-      {/* <Lesson_08 /> */}
-=======
       <GlobalStyles />
       <Lesson_08 />
->>>>>>> Stashed changes
 
       {/* <Homework_06 /> */}
-      <Homework_07 />
+      {/* <Homework_07 /> */}
       
     </>
   );
