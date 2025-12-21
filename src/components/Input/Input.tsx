@@ -1,4 +1,4 @@
-import { InputWrapper, InputLabel, InputComponent, ErrorText } from "./styles"
+import { InputWrapper, InputLabel, InputComponent, ErrorText } from "./styles";
 
 import { type InputProps } from "./types";
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-boolean-cast */
 import styled from "@emotion/styled";
 
 interface InputComponentProps {
@@ -11,7 +12,7 @@ const generateInputBorder = (
   if (disabled) {
     return "#acacacff";
   } else {
-    if (error) {
+    if (!!error) {
       return "#ff6868ff";
     } else {
       return "#3f3f3f";
