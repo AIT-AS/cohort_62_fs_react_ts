@@ -1,3 +1,12 @@
+// Импортируем BrowserRouter, Route, Routes для настройки маршрутизации
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Layout from "components/Layout/Layout"; 
+import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
+import Home from "pages/EmployeeApp/Home/Home";
+import LogIn from "pages/EmployeeApp/LogIn/LogIn";
+import About from "pages/EmployeeApp/About/About";
+
 import GlobalStyles from "styles/GlobalStyles";
 
 // Lessons
@@ -18,17 +27,26 @@ import GlobalStyles from "styles/GlobalStyles";
 // import Homework_09 from "homeworks/Homework_09/Homework_09";
 // import Homework_10 from "homeworks/Homework_10/Homework_10";
 // Homework 11 ist Lesson 11
-import Homework_12 from "homeworks/Homework_12/Homework_12";
+// import Homework_12 from "homeworks/Homework_12/Homework_12";
 
 
 // Consultations
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+      <GlobalStyles />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="*" element="Page Not Found" />
+        </Routes>
+      </Layout>
       {/* <Lesson_06 /> */}
       {/* <Lesson_07 /> */}
-      <GlobalStyles />
       {/* <Lesson_08 /> */}
       {/* <Lesson_09 /> */}
       {/* <Lesson_10 /> */}
@@ -40,9 +58,9 @@ function App() {
       {/* <Homework_08 /> */}
       {/* <Homework_09 /> */}
       {/* <Homework_10 /> */}
-      <Homework_12 />
+      {/* <Homework_12 /> */}
       
-    </>
+    </BrowserRouter>
   );
 }
 
