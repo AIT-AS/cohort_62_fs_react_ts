@@ -1,11 +1,11 @@
 // Импортируем BrowserRouter, Route, Routes для настройки маршрутизации
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Layout from "components/Layout/Layout"; 
-import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
-import Home from "pages/EmployeeApp/Home/Home";
-import LogIn from "pages/EmployeeApp/LogIn/LogIn";
-import About from "pages/EmployeeApp/About/About";
+// import Layout from "components/Layout/Layout"; 
+// import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
+// import Home from "pages/EmployeeApp/Home/Home";
+// import LogIn from "pages/EmployeeApp/Login/Login";
+// import About from "pages/EmployeeApp/About/About";
 
 import GlobalStyles from "styles/GlobalStyles";
 
@@ -17,6 +17,7 @@ import GlobalStyles from "styles/GlobalStyles";
 // import Lesson_10 from "lessons/Lesson_10/Lesson_10";
 // import Lesson_11 from "lessons/Lesson_11/Lesson_11";
 // import Lesson_12 from "lessons/Lesson_12/Lesson_12";
+import Lesson_14 from "lessons/Lesson_14/Lesson_14";
 
 
 
@@ -36,7 +37,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -44,7 +45,7 @@ function App() {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="*" element="Page Not Found" />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* <Lesson_06 /> */}
       {/* <Lesson_07 /> */}
       {/* <Lesson_08 /> */}
@@ -52,6 +53,7 @@ function App() {
       {/* <Lesson_10 /> */}
       {/* <Lesson_11 /> */}
       {/* <Lesson_12 /> */}
+      <Lesson_14 />
 
       {/* <Homework_06 /> */}
       {/* <Homework_07 /> */}
